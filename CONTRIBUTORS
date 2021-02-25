@@ -1,0 +1,17 @@
+This project was a collaboration between Lessly Ortiz and Lesly Oquendo for our CSC 111 final project. 
+Below are our personal summaries of our individual contributions to this project.
+
+Lessly’s contribution: I took care of cropping and converting the user and food images to the type of file we needed (png), pixel size, and cropping they needed with online tools. 
+I also created the loops and functions needed for them to appear on the screen initially. 
+In addition, I created the code they needed for the user’s input to make the guinea pig image to move and for the food images to disappear and respawn on the window when the user touched them. 
+I created the code that allowed the score to continuously update and display on the window according to whether the user’s character and food touched. 
+I also created the conditionals that kept the user character within boundaries of the windows display. 
+I cleaned the code up once we were done for a clean and neater look with spacing and their corresponding comments. 
+
+Lesly’s contribution: My experience with this project was a very educational and fun experience. 
+I found that working with Les was a very rewarding experience and in the end, we made something that we could be proud of. 
+My contributions to this project were the musical sound effects and some of the graphical elements that are portrayed in the game. 
+So I made some of the codings that allowed the main menu screen to pop up at the start & that could be clicked away. 
+I also composed the background music that played in the background of the game on loop. 
+I was also responsible for the sound effect of chicken eating the cilantro. 
+I also tested out and checked some of the mechanics of the game when certain elements were implemented.
