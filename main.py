@@ -2,7 +2,7 @@ import pygame
 import time 
 import random
 import math
-from replit import audio
+
 
 #initializers: 
 screen     = pygame.display.set_mode((800, 700)) #window 900 x 700 pixels
@@ -14,12 +14,12 @@ Gameoverscreen = pygame.image.load('Game-over-screen.png')
 clock      = pygame.time.Clock()
 running    = True #keeps our while loop below going 
 menu       = True
+pygame.mixer.init()
 
-
-#background_music ##Still needs some work
-source = audio.play_file('Pig-Out-Opening.mp3')
-volume = 2
-loops  = -1
+#background_music 
+def Music():
+    pygame.mixer.music.load('Pig-Out-Opening.mp3')
+    pygame.mixer.music.play(-1)
 
 
 #font initializer
@@ -65,8 +65,7 @@ def Cilantro(cilantropicx, cilantropicy , i):
 def Collision(cilantropicx, cilantropicy, chickenpicx, chickenpicy):
     """This function calculates the distance between chicken and a cilantro image on the screen to check if they "collided" and returns True or False. Since our images appear to accurately "collide" when their distance is 40 pixels, the function returns True at this occurence. This is done by using both chicken's x y coordinate variables and the cilantro's x y coordiante variables as parameters to use in the distance equation""" 
     dist = math.sqrt((math.pow(chickenpicx - cilantropicx, 2)) + (math.pow(chickenpicy - cilantropicy, 2))) 
-    if dist <= 40: # because taking into account how thick in pixels chicken and food are
-        audio.play_file('Eating-Sound.mp3')
+    if dist <= 40: 
         return True
     else:
         return False
@@ -92,9 +91,8 @@ while menu:
 
 
 #the following while loop contains actions that we want to keep going continuously as the game goes on:
- ##main menu code ##still needs work and background image
 while running == True:
-
+    Music()
     screen.fill((0, 0, 0)) #makes the window black 
     screen.blit(background, (0,0)) #draws our background to the window
     
